@@ -1,0 +1,9 @@
+-fontnya apa aja ?
+-color palette ?
+-apakah untuk desktop, tetap one column begitu untuk info ?
+-timeline itu ada yang gak sama, apa per tahun atau gimana ? ada tooltip ?
+-backend perlu dibikin sekarang ? 
+-apakah gambar info di event bisa slide dan banyak ?
+-keterhubungan cerita ada dimana link atau apanya ?
+-kalau tombol sosmed dimana ?
+-kurang tahu ini cerita atau apa ? fakta atau fiktif

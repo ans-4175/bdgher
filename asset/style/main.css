@@ -1,0 +1,401 @@
+/*********************************************************************************************
+1.  Default / for Grid 1200px             
+2.  960px 
+3.  720px
+4.  lt 720px 
+**********************************************************************************************/
+
+
+/********************************************************************************************* 
+
+1.  Default / for Grid gt 1200px             
+
+*********************************************************************************************/   
+
+/* Style for demo REMOVE THIS SECTION */
+@font-face {
+    font-family: 'josefin_sansregular';
+    src: url('josefin/josefinsans-regular-webfont.eot');
+    src: url('josefin/josefinsans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('josefin/josefinsans-regular-webfont.woff') format('woff'),
+         url('josefin/josefinsans-regular-webfont.ttf') format('truetype'),
+         url('josefin/josefinsans-regular-webfont.svg#josefin_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'josefin_slabbold';
+    src: url('josefin/josefinslab-bold-webfont.eot');
+    src: url('josefin/josefinslab-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('josefin/josefinslab-bold-webfont.woff') format('woff'),
+         url('josefin/josefinslab-bold-webfont.ttf') format('truetype'),
+         url('josefin/josefinslab-bold-webfont.svg#josefin_slabbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+/*
+merah : #d54e2f;
+coklat : #382d27;
+krem : #f3e8bb;
+hijau :#8aa794;
+*/
+}
+body{
+	background-color: #f3e8bb;
+}
+#header{
+  position: relative;
+}
+.stretch {
+	width:100% !important;
+    max-height:100%;
+    display:block;
+	background-size: cover;
+	-moz-background-size: cover;  /* Firefox 3.6 */
+ 	background-position: center;  /* Internet Explorer 7/8 */
+}
+#judul{
+	font-family: 'josefin_slabbold';
+	position: absolute;
+	bottom:-0px;
+	font-size: 40pt;
+	line-height: 40pt;
+	text-align: left;
+}
+.div-caption{
+	margin-bottom: 30px;
+	margin-left: 30px;
+}
+.caption{
+	padding: 10px 10px 5px 10px;
+	color: #f3e8bb;
+	background-color: #382d27;
+}
+.caption2{
+	padding: 10px 10px 5px 10px;
+	color: #f3e8bb;
+	background-color: #d54e2f;
+}
+#btnhead{
+	color: #f3e8bb;
+	background-color: rgba(56,45,39,0.8);
+	font-family: 'josefin_slabbold';
+	font-size: 25pt;
+	width: 100%;
+	line-height: 30pt;
+}
+.saga{
+	width: 150px;
+	text-align: center;
+	float: left;
+}
+.facts{
+	width: 150px;
+	text-align: center;
+	float: right;
+}
+.link-head{
+	color: #8aa794;
+	border-left-style: solid;
+}
+.link-head a{
+	color: #8aa794;
+	text-decoration: none;
+}
+.link-head2{
+	color: #8aa794;
+	border-right-style: solid;
+}
+.link-head2 a{
+	color: #8aa794;
+	text-decoration: none;
+}
+#panah-i{
+	position: relative;
+	height: 25px;
+	width : auto;
+}
+.putar-kiri{
+	/* Firefox */
+    -moz-transform:rotate(180deg);
+    /* Safari and Chrome */
+    -webkit-transform:rotate(180deg);
+    /* Opera */
+    -o-transform:rotate(180deg);
+    /* IE9 */
+    -ms-transform:rotate(180deg);
+}
+.kotak-trans{
+	height: 15px;
+}
+#isi-cerita{
+	max-height:300px;
+	overflow-y: auto;
+	font-family: 'josefin_sansregular';
+	font-size: 25pt;
+	line-height: 40pt;
+	padding: 0 20px 0 20px;
+}
+.cokelat{
+	padding: 30px;
+	background-color: #382d27;
+	color: #f3e8bb;
+}
+.m-f-{
+	font-family: 'josefin_sansregular';
+	font-size: 25pt;
+	line-height: 40pt;
+}
+.m-f-title{
+	width: 40%;
+	float: left;
+}
+.m-f-content{
+	font-weight: bold;
+	float: left;
+	width: 60%;
+}
+#trivia{
+	font-family: 'josefin_sansregular';
+	font-size: 25pt;
+	line-height: 30pt;	
+}
+.tr-teks{
+	padding: 20px 40px;
+}
+.tr-img{
+	margin: 20px 0;
+	position: relative;
+}
+.judul-img{
+	position: absolute;
+	bottom:-0px;
+	right:20px;
+	font-size: 30pt;
+	line-height: 45pt;
+	text-align: right;
+}
+.div-caption-img{
+	margin-bottom: 20px;
+}
+.caption-img{
+	padding: 5px 5px 2px 5px;
+	color: #f3e8bb;
+	background-color: #d54e2f;
+}
+.i-s-title{
+	font-family: 'josefin_slabbold';
+	font-size: 30pt;
+	margin-bottom: 30px;
+}
+.i-s-content{
+	font-family: 'josefin_sansregular';
+	font-size: 15pt;
+	line-height: 20pt;	
+	margin-top: 10px;
+}
+#btnscroll{
+	position: fixed;
+	right: -185px;
+	top: 100px;
+	z-index: 9999;
+	opacity: 0.2;
+}
+#btnscroll:hover{
+	/*opacity: 0.8;*/
+}
+#bgpanah{
+	width: 15%;
+	height: auto;
+}
+#panah-atas{
+	position: absolute;
+	top: 5px;
+	left: 3px;
+	width: 13%;
+	height: auto;
+}
+#panah-bawah{
+	position: absolute;
+	bottom: 10px;
+	left: 3px;
+	width: 13%;
+	height: auto;
+	/* Firefox */
+    -moz-transform:rotate(180deg);
+    /* Safari and Chrome */
+    -webkit-transform:rotate(180deg);
+    /* Opera */
+    -o-transform:rotate(180deg);
+    /* IE9 */
+    -ms-transform:rotate(180deg);
+}
+/********************************************************************************************* 
+
+2.  960px 
+
+*********************************************************************************************/  
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+	#isi-cerita{
+		max-height:600px;
+	}
+}
+	
+
+/********************************************************************************************* 
+
+3.  720px 
+
+*********************************************************************************************/ 
+
+@media only screen and (min-width: 769px) and (max-width: 959px) {
+	#isi-cerita{
+		max-height:800px;
+	}
+}
+ 
+ 
+
+/********************************************************************************************* 
+
+4.  lt 720px 
+
+*********************************************************************************************/ 
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+	#isi-cerita{
+		max-height:700px;
+	}
+	#judul{
+		font-size: 20pt;
+		line-height: 30pt;
+	}
+	.judul-img{
+		font-size: 20pt;
+		line-height: 30pt;
+	}
+	.m-f-{
+		font-size: 20pt;
+		line-height: 25pt;
+	}
+}
+
+
+@media only screen and (min-width: 361px) and (max-width: 480px) {
+	#isi-cerita{
+		max-height:550px;
+	}
+	#judul{
+		font-size: 16pt;
+		line-height: 25pt;
+	}
+	.div-caption{
+		margin-bottom: 10px;
+		margin-left: 20px;
+	}
+	.m-f-{
+		font-size: 15pt;
+		line-height: 20pt;
+	}
+	.cokelat{
+		padding: 15px;
+	}
+	#poi{
+		height: 20px;
+		width: auto;
+	}
+	#trivia{
+		font-size: 18pt;
+		line-height: 25pt;
+	}
+	.tr-teks{
+		padding: 10px 20px;
+	}
+	.tr-img{
+		margin: 20px 0;
+	}
+	.judul-img{
+		font-size: 15pt;
+		line-height: 25pt;
+	}
+	.div-caption-img{
+		margin: 0 2px 10px 2px;
+	}
+	.caption-img{
+		padding: 5px 5px 2px 5px;
+	}
+}
+
+@media only screen and (max-width: 360px) {
+	#judul{
+		font-size: 15pt;
+		line-height: 30pt;
+	}
+	.div-caption{
+		margin-bottom: 10px;
+		margin-left: 20px;
+	}
+	#btnhead{
+		font-size: 15pt;
+		line-height: 20pt;
+	}
+	.saga{
+		width: 100px;
+		text-align: center;
+		float: left;
+	}
+	.facts{
+		width: 100px;
+		text-align: center;
+		float: right;
+	}
+	#panah-i{
+		position: relative;
+		height: 15px;
+		width : auto;
+	}	
+	#isi-cerita{
+		max-height:400px;
+		font-size: 15pt;
+		line-height: 25pt;
+		padding: 0 20px 0 20px;
+	}
+	.m-f-{
+		font-size: 12pt;
+		line-height: 20pt;
+	}
+	.cokelat{
+		padding: 15px;
+	}
+	#poi{
+		height: 20px;
+		width: auto;
+	}
+	#trivia{
+		font-size: 15pt;
+		line-height: 20pt;
+	}
+	.tr-teks{
+		padding: 10px 20px;
+	}
+	.tr-img{
+		margin: 10px 0;
+	}
+	.judul-img{
+		font-size: 15pt;
+		line-height: 20pt;
+	}
+	.div-caption-img{
+		margin: 0 2px 10px 2px;
+	}
+	.caption-img{
+		padding: 5px 5px 2px 5px;
+	}
+	.i-s-title{
+		font-size: 25pt;
+		margin-bottom: 20px;
+	}
+	.i-s-content{
+		font-size: 11pt;
+		line-height: 15pt;	
+		margin-top: 5px;
+	}
+}
