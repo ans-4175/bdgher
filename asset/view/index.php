@@ -12,7 +12,7 @@ function view_cerita(){
         <!-- Add your site or application content DOWN here -->
         <div id="container" ng-controller="crtCtrl">
             <div id="header">
-                <img class="stretch" src="<?php echo IMAGE_URL ?>albar-cover.jpg">
+                <img class="stretch" src="<?php echo IMAGE_URL ?>{{cerita.cover}}">
                 <div id="judul"><div class="div-caption"><span class="caption">{{cerita.judul}}</span></div></div>
             </div>
             <div id="btnhead" style="position: fixed;top: 0px;">
@@ -35,6 +35,7 @@ function view_cerita(){
 		bdgApp.controller('crtCtrl', ['$scope', function ($scope) {
 			// Controller magic
 			$scope.cerita = {
+				"cover":cerita.cover,
 				"judul":cerita.judul
 			};
 			$scope.isi_cerita = cerita.isi;
