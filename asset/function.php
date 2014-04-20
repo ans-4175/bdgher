@@ -28,16 +28,26 @@ function store_visit($to){
 		$_SESSION['visit']['from'] = "";
 		$_SESSION['visit']['to'] = $to;
 	}
+	$ua = slugging($_SERVER['HTTP_USER_AGENT']);
 	$ip = $_SESSION['visit']['ip'];
 	$from = $_SESSION['visit']['from'];
 	$to = $_SESSION['visit']['to'];
-	//store in db
-	$db = new db();
-	$query = "INSERT INTO `bdg_counter` (`ip_id`, `from`, `to`) VALUES ('$ip', '$from', '$to');";
-	//echo $query;
-	$ret = 0;
-	$db->exec($query);
-	$ret = $db->lastInsertId();
-	
+	if (strcmp($from,$to)<>0){
+		//store in db
+		$db = new db();
+		$query = "INSERT INTO `bdg_counter` (`ip_id`, `dari`, `ke`, `ua`) VALUES ('$ip', '$from', '$to', '$ua');";
+		//echo $query;
+		$ret = 0;
+		$db->exec($query);
+		$ret = $db->lastInsertId();
+	}
+}
+
+function check_places($tujuan){
+	$ret = false;
+	$places = array('albaraltim','stpeter','villmer','drielok','graha','pagergunung');
+	foreach ($places as $place){
+		if (strcmp($tujuan,$place)==0) $ret=true;
+	}
 	return $ret;
 }

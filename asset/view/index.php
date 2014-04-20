@@ -2,8 +2,8 @@
 if (!defined('ROOT_PATH')) die('No direct access.');
 function view_cerita(){
 	view_header_top();
-	view_header_bottom();
 	echo "<title>Bandung Heritage</title>";
+	view_header_bottom();
 	?>
 	<div ng-app="bdgApp">
         <!--[if lt IE 7]>
@@ -48,8 +48,8 @@ function view_cerita(){
 
 function view_info(){
 	view_header_top();
-	view_header_bottom();
 	echo "<title>Bandung Heritage</title>";
+	view_header_bottom();
 	?>
 	<div ng-app="bdgApp">
         <!--[if lt IE 7]>
@@ -136,6 +136,16 @@ function view_info(){
 		}]);
 		//alert(cerita.judul);
         </script>
+	<?php
+	view_footer_bottom();
+}
+
+function view_splash(){
+	view_header_top();
+	echo "<title>Bandung Heritage</title>";
+	view_header_bottom();
+	?>
+	<img class="stretch" src="<?php echo IMAGE_URL ?>konsep.jpg">	
 	<?php
 	view_footer_bottom();
 }

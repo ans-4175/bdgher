@@ -24,6 +24,8 @@ define('SCRIPT_URL',ASSET_URL.'script/');
 define('IDB_HOST','localhost');
 define('IDB_USER','root');
 define('IDB_PASS','bismillah');
+//define('IDB_USER','labtekin_die');
+//define('IDB_PASS','w1t1XvA13r');
 define('IDB_NAME','labtek_indie');
 define('TBL_PR','bdg_');
 //---------------------------------------------------------------------------
