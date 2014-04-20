@@ -77,13 +77,34 @@ function view_info(){
                 <div class="m-f-" ng-show="info.arch"><div class="m-f-title">Architect</div><div class="m-f-content">{{info.arch}}</div><div style="clear:both"></div></div>
                 <div class="m-f-" ng-show="info.style"><div class="m-f-title">Style</div><div class="m-f-content">{{info.style}}</div><div style="clear:both"></div></div>
             </div>
-            <div id="trivia">
-				<div ng-repeat="trivia in info.trivias">
-                <div class="tr-teks" ng-show="trivia.teks" ng-bind-html="trivia.teks"></div>
-                <div class="tr-img"  ng-show="trivia.img">
-                    <img class="stretch" src="<?php echo IMAGE_URL ?>{{trivia.img}}">
-                    <div class="judul-img"><div class="div-caption-img"><span class="caption-img">{{trivia.caption}}</span></div></div>
+            <div ng-show="info.buildings" id="building" class="fact-content">
+				<div class="f-c-title">BUILDING</div>
+				<div ng-repeat="building in info.buildings">
+					<div class="f-c-teks" ng-if="building.teks != null" ng-bind-html="building.teks"></div>
+					<div class="f-c-img"  ng-if="building.img != null">
+						<img class="stretch" src="<?php echo IMAGE_URL ?>{{building.img}}">
+						<div class="judul-img"><div class="div-caption-img"><span class="caption-img">{{building.caption}}</span></div></div>
+					</div>
                 </div>
+            </div>
+            <div ng-show="info.archs" id="arch" class="fact-content">
+				<div class="f-c-title">ARCHITECT</div>
+				<div ng-repeat="arch in info.archs">
+					<div class="f-c-teks" ng-if="arch.teks != null" ng-bind-html="arch.teks"></div>
+					<div class="f-c-img"  ng-if="arch.img != null">
+						<img class="stretch" src="<?php echo IMAGE_URL ?>{{arch.img}}">
+						<div class="judul-img"><div class="div-caption-img"><span class="caption-img">{{arch.caption}}</span></div></div>
+					</div>
+                </div>
+            </div>
+            <div ng-show="info.trivias" id="trivia" class="fact-content">
+				<div class="f-c-title">TRIVIA</div>
+				<div ng-repeat="trivia in info.trivias">
+					<div class="f-c-teks" ng-if="trivia.teks != null" ng-bind-html="trivia.teks"></div>
+					<div class="f-c-img"  ng-if="trivia.img != null">
+						<img class="stretch" src="<?php echo IMAGE_URL ?>{{trivia.img}}">
+						<div class="judul-img"><div class="div-caption-img"><span class="caption-img">{{trivia.caption}}</span></div></div>
+					</div>
                 </div>
             </div>
             <div id="image-src" class="cokelat">
@@ -103,9 +124,12 @@ function view_info(){
 				"cover":info.cover,
 				"judul":info.judul,
 				"addr":info.addr,
+				"coord":info.coord,
 				"year":info.year,
 				"arch":info.arch,
 				"style":info.styled,
+				"buildings":info.building,
+				"archs":info.archs,
 				"trivias":info.trivia,
 				"sources":info.sources,
 			};
