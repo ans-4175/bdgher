@@ -83,7 +83,7 @@ function view_footer_top() {
 	echo '<!-- script and etc -->
         <!--script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script-->
         <!--script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script-->
-        <script>if(typeof angular == "undefined"){document.write(\'<script src="'.SCRIPT_URL.'vendor/angular.min.js"><\/script>\');}</script>
+        <script> if (typeof angular == "undefined") {document.write(\'<script src="'.SCRIPT_URL.'vendor/angular.min.js"><\/script>\');}</script>
         <!--script>window.jQuery || document.write("<script src="js/vendor/jquery-1.10.2.min.js"><\/script>)</script-->
         <script src="'.SCRIPT_URL.'vendor/angular-sanitize.js"></script>
         <script src="'.SCRIPT_URL.'plugins.js"></script>
